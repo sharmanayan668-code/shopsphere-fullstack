@@ -1,0 +1,22 @@
+{
+  "name": "shopsphere-platform",
+  "version": "1.0.0",
+  "description": "ShopSphere – Complete E-Commerce & Inventory Management Platform",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "seed": "npm --prefix backend run seed",
+    "build": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "ecommerce",
+    "inventory-management",
+    "mern",
+    "react",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT"
+}
