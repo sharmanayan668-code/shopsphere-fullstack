@@ -142,16 +142,4 @@ Navigate to:
 
 ---
 
-## 🎓 Academic Viva & Presentation Notes
-
-1. **Why is the cart persisted in MongoDB rather than localStorage?**
-   - *Answer:* Persistent database carts ensure that a user can switch between mobile and desktop devices without losing their selected items, and allows server-side stock validation at all times.
-2. **How does ShopSphere prevent overselling?**
-   - *Answer:* When an order is placed, `inventoryService.decrementStockForOrder` validates that the requested quantity is less than or equal to the live stock in MongoDB. If valid, it atomically decrements the stock and records an audit log.
-3. **What happens if a payment fails or an order is cancelled?**
-   - *Answer:* A compensating transaction is triggered via `restoreStockForOrder`. Stock is restored to the product collection and an `InventoryMovement` record of type `cancellation_restock` is generated for accounting consistency.
-4. **Why are financial calculations strictly performed on the backend?**
-   - *Answer:* Client-side prices can easily be manipulated using browser developer tools. By recalculating items, subtotals, tax rates, shipping, and coupon discounts from authoritative database records on the server, security and pricing integrity are guaranteed.
-
----
-© Developed for B.Tech Internship Evaluation.
+© Developed for Internship Evaluation.
